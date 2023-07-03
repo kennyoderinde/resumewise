@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import defaultAvatar from '../../assets/avatar-frame.svg';
+import { BiSolidDownArrow } from "react-icons/bi";
+
+
 
 const Avatar = ({ accountPage, signOut }) => {
   const [showModal, setShowModal] = useState(false);
@@ -18,8 +21,10 @@ const Avatar = ({ accountPage, signOut }) => {
       className=""
       onMouseEnter={handleMouseEnter}
     >
-      <img src={defaultAvatar} alt='' className=" sm:flex w-10 h-10 sm:mt-4 mt-20 ml-6" />
-
+      <div className='flex space-x-2 group'>
+        <img src={defaultAvatar} alt='' className=" sm:flex w-10 h-10 sm:mt-4 mt-20 ml-6" />
+        < BiSolidDownArrow size={30} className=' text-[#090c13] hover:text-[#0AC5A8]' />
+      </div>
       {showModal && (
         <div
           className=' sm:grid absolute  sm:rounded-lg sm:w-36 sm:h-20 shadow-gray-600 shadow sm:top-16 top-24 sm:-left-12 left-14 p-2 bg-[#F5F5F5] '

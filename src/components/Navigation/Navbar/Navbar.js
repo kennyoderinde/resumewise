@@ -125,7 +125,7 @@ function Navbar() {
     <div className=' fixed top-0 w-full'>
       <div className='header-parent bg-[#F5F5F5] sm:flex sm:space-x-24 sm:h-20 h-20 '>
           <a href='#' className='logo-anchor'>
-            <img className='sm:w-44 sm:h-12 w-44 h-12  sm:m-4  ' src={resumeWiseLogo} alt='logo' />  
+            <img className='sm:w-44 sm:h-12 w-44 h-12  sm:m-4 ' src={resumeWiseLogo} alt='logo' />  
           </a>
         <header className=' hidden header sm:flex sm:justify-center sm:space-x-20 '>
           
@@ -196,7 +196,7 @@ function Navbar() {
 
 
             <Link to="/sign-out">
-                <button type='button' className=' text-[#090c13] text-lg sm:text-base -ml-24 i font-quicksand font-semibold whitespace-nowrap '> 
+                <button type='button' className=' text-[#090c13] text-lg sm:text-base -ml-[7rem] pl-2 i font-quicksand font-semibold whitespace-nowrap '> 
                   Sign Out
                 </button>
               </Link>

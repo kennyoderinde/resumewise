@@ -16,7 +16,6 @@ import { FaTimes } from "react-icons/fa";
 function Navbar() {
   const [nav, setNav] = useState(false);
 
-
   const navLinks = [
     {
       name: "Resume Templates",
@@ -123,9 +122,9 @@ function Navbar() {
 
   return (
     <div className=' fixed top-0 w-full'>
-      <div className='header-parent bg-[#F5F5F5] sm:flex sm:space-x-24 sm:h-20 h-20 '>
+      <div className='header-parent bg-[#F5F5F5] sm:flex sm:space-x-24 sm:h-20 h-14 sm:p-1 p-2 shadow-md '>
           <a href='#' className='logo-anchor'>
-            <img className='sm:w-44 sm:h-12 w-44 h-12  sm:m-4 ' src={resumeWiseLogo} alt='logo' />  
+            <img className='sm:w-44 sm:h-12 w-36 h-12  sm:m-4 ' src={resumeWiseLogo} alt='logo' />  
           </a>
         <header className=' hidden header sm:flex sm:justify-center sm:space-x-20 '>
           
@@ -151,7 +150,7 @@ function Navbar() {
 
         {nav && (
 
-        <div className=" sm:hidden absolute flex  w-full h-screen top-0 left-0 bg-gray-700 opacity-75">
+        <div className=" sm:hidden absolute flex  w-full h-screen top-0 left-0 bg-gray-600 opacity-90">
           <div className=" sm:hidden flex flex-col justify-start items-center  absolute top-0 left-44 w-60 h-screen bg-white shadow-lg text-[#090c13] font-quicksand ">
 
 

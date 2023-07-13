@@ -28,9 +28,19 @@ module.exports = {
         '18' : '20rem',
       },
 
+      height: {
+        '61': '5px',
+        '100' : '120vw',
+        '60': '58%',
+        '66': '60%',
+        '30' : '30rem',
+        '18' : '20rem',
+      },
+
+
        spacing: {
         '61rem': '61rem', // Replace with your desired value
-        '59rem': '59rem',
+        '30rem': '30rem',
         '7rem': '7rem' ,  
 
         '23rem': '23rem' 

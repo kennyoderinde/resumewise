@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 const NavigationDesktop = ({ navLinks }) => {
   const [showSubMenu, setShowSubMenu] = useState([]);
+  const [activeItem, setActiveItem] = useState(null)
+
+  const handleClick = (path) => {
+    // window.location.pathname = path;
+    setActiveItem(path);
+  }
 
   const variants = {
     open: { opacity: 1, x: 0 },
@@ -30,16 +37,25 @@ const NavigationDesktop = ({ navLinks }) => {
       <ul className='main-nav sm:flex grid sm:-space-y-0 space-y-3 list-none sm:w-61 sm:justify-stretch sm:p-0 sm:pl-4 '>
         {navLinks.map((el, i) => {
           if (!el.children) {
+            const isActive = activeItem === el.path;
             return (
-              <li key={i}
-              onClick={() => {window.location.pathname = el.path}}
-              className=' '
-              >
-                <a href="#" className='header-nav-link  sm:flex no-underline sm:h-16 sm:w-36 self-center sm:justify-center sm:items-center hover:text-[#0AC5A8] '>
-                  <span className=" whitespace-nowrap block font-quicksand font-semibold sm:text-base text-lg text-[#090c13] hover:text-[#0AC5A8]  ">{el.name}</span>
-                </a>
+              <li key={i}>
+                <Link
+                  to={el.path}
+                  className={`header-nav-link sm:flex no-underline sm:h-16 sm:w-36 self-center sm:justify-center sm:items-center hover:text-[#0AC5A8] ${
+                    isActive ? 'text-[#0AC5A8]' : 'text-[#090c13]'
+                  }`}
+                  onClick={() => handleClick(el.path)}
+                >
+                  <span className={`whitespace-nowrap block font-quicksand font-semibold sm:text-base text-lg hover:text-[#0AC5A8] ${
+                    isActive ? 'text-[#0AC5A8]' : 'text-[#090c13]'
+                  }`}>
+                    {el.name}
+                  </span>
+                </Link>
               </li>
             );
+            
           }
 
           return (
@@ -80,34 +96,34 @@ const NavigationDesktop = ({ navLinks }) => {
                       );
                     }
 
-                    return (
-                      <li
-                        onMouseEnter={() => subMenuOnMouseEnterHandler(index)}
-                        onMouseLeave={() => subMenuOnMouseLeaveHandler(index)}
-                        key={index}
-                        className='sub-menu-options sub-menu-hover hover:text-[#0AC5A8] relative sm:w-full sm:h-10 bg-none'
-                      >
-                        <div className='sub-menu-div hover:text-[#0AC5A8] flex items-center border border-[#0d1b2a]'>
-                          <span className="">{ele.name}</span>
-                        </div>
-                        <motion.ul
-                          variants={variants}
-                          animate={showSubMenu[index] ? "open" : "closed"}
-                          className='sub-menu-ul absolute hover:text-[#0AC5A8] list-none top-0 left-full sm:w-36'
-                        >
-                          {showSubMenu[index] &&
-                            ele.children.map((elem, subIndex) => {
-                              return (
-                                <li key={subIndex} className='grand-child-link hover:text-[#0AC5A8]'>
-                                  <a href='#' className=" sm:w-full  h-'full">
-                                    <span className="">{elem.name}</span>
-                                  </a>
-                                </li>
-                              );
-                            })}
-                        </motion.ul>
-                      </li>
-                    );
+                    // return (
+                    //   <li
+                    //     onMouseEnter={() => subMenuOnMouseEnterHandler(index)}
+                    //     onMouseLeave={() => subMenuOnMouseLeaveHandler(index)}
+                    //     key={index}
+                    //     className='sub-menu-options sub-menu-hover hover:text-[#0AC5A8] relative sm:w-full sm:h-10 bg-none'
+                    //   >
+                    //     <div className='sub-menu-div hover:text-[#0AC5A8] flex items-center border border-[#0d1b2a]'>
+                    //       <span className="">{ele.name}</span>
+                    //     </div>
+                    //     <motion.ul
+                    //       variants={variants}
+                    //       animate={showSubMenu[index] ? "open" : "closed"}
+                    //       className='sub-menu-ul absolute hover:text-[#0AC5A8] list-none top-0 left-full sm:w-36'
+                    //     >
+                    //       {showSubMenu[index] &&
+                    //         ele.children.map((elem, subIndex) => {
+                    //           return (
+                    //             <li key={subIndex} className='grand-child-link hover:text-[#0AC5A8]'>
+                    //               <a href='#' className=" sm:w-full  h-'full">
+                    //                 <span className="">{elem.name}</span>
+                    //               </a>
+                    //             </li>
+                    //           );
+                    //         })}
+                    //     </motion.ul>
+                    //   </li>
+                    // );
                   })}
               </motion.ul>
             </li>

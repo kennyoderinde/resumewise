@@ -27,7 +27,7 @@ const Avatar = ({ accountPage, signOut }) => {
       </div>
       {showModal && (
         <div
-          className=' sm:grid absolute  sm:rounded-lg sm:w-36 sm:h-20 shadow-gray-600 shadow sm:top-16 top-24 sm:-left-12 left-14 p-2 bg-[#F5F5F5] '
+          className=' sm:grid absolute  sm:rounded-lg sm:w-36 sm:h-20 sm:top-16 top-24 sm:-left-12 left-14 p-2 bg-[#F5F5F5] 'style={{ boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)' }}
           onMouseLeave={() => setShowModal(false)}
         >
           <p

@@ -39,8 +39,11 @@ module.exports = {
 
 
        spacing: {
-        '61rem': '61rem', // Replace with your desired value
+        '43rem': '43rem', // lady image 
+        '47rem': '47rem',
+        '38rem': '38rem',
         '30rem': '30rem',
+        '23.5rem': '23.5rem',
         '7rem': '7rem' ,  
 
         '23rem': '23rem' 

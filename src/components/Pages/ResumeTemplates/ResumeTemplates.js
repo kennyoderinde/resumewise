@@ -31,6 +31,7 @@
 
 import React from 'react'
 import resumeTempImg from '../../assets/group (1).png'
+import Switch from './Switch'
 
 const ResumeTemplates = () => {
   return (
@@ -43,41 +44,31 @@ const ResumeTemplates = () => {
 
 
 
-    <div className=" relative flex justify-center h-screen mt-12">
-      {/* <div class=" absolute top-80 h-[300px] w-full bg-[#0AC5A8] rounded-[50%]"></div> */}
-      <div className="z-30 sm:w-11/12 sm:h-80 flex justify-end bg-stone-200 bg-gradient-to-b from-white via-white to-[#0AC5A8] shadow-xl rounded-2xl">
-        <img src={resumeTempImg} alt='' className='relative sm:mr-10' />
-      </div>
+    <div className="  flex justify-center h-screen mt-12">
+      <div className="z-10 sm:w-11/12 sm:h-72 flex justify-end bg-stone-200 bg-gradient-to-b from-white via-white to-[#0AC5A8] shadow-xl rounded-2xl" style={{ boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)' }}></div>
+      
     </div>
+    <Switch />
 
-    <div className="flex items-center justify-center h-screen">
-      <div className="relative -top-30rem sm:w-full sm:h-80">
+      <img src={resumeTempImg} alt='' className='relative z-20 sm:mr-10 w-5/12 h-96 -top-47rem left-43rem' />
+
+    <div className=" z-0 flex items-center justify-center h-screen">
+      <div className="absolute top-23.5rem sm:w-full sm:h-80">
         <svg
           className="wave-pattern"
-          viewBox="180 0 800 320"
+          viewBox="0 -50 1000 550"
           xmlns="http://www.w3.org/2000/svg"
           style={{ transform: 'rotate(180deg)' }}
         >
           <path
             fill="#0AC5A8"
             fillOpacity="1"
-            d="M0,64L40,85.3C80,107,160,149,240,154.7C320,160,400,128,480,144C560,160,640,224,720,240C800,256,880,224,960,192C1040,160,1120,128,1200,133.3C1280,139,1360,181,1400,202.7L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+            d="M0,420C0,420,0,320,125,320C250,320,250,420,375,420C500,420,500,320,625,320C750,320,750,420,875,420C1000,420,1000,320,1125,320C1250,320,1250,420,1375,420C1500,420,1500,320,1625,320C1750,320,1750,420,1875,420C2000,420,2000,320,2125,320C2250,320,2250,420,2375,420C2500,420,2500,320,2625,320L2625,420L0,420Z"
           ></path>
         </svg>
       </div>
     </div>
 
-
-
-  {/* <div class="overflow-x-hidden">
-    <div class=" bottom-0 mt-[100px] ml-[-50%] h-[500px] w-[200%] rounded-t-[100%] ">
-      <div class="mt-5 text-center text-2xl text-white">Footer</div>
-    </div>
-  </div> */}
-
-    {/* <div className=' sm:w-10/12 sm:h-23rem bg-stone-100'>
-
-    </div> */}
     </>
   )
 }

@@ -30,13 +30,13 @@
 // export default ResumeTemplates
 
 import React from 'react'
-import resumeTempImg from '../../assets/group (1).png'
+
 import Switch from './Switch'
 
 const ResumeTemplates = () => {
   return (
     <>
-    <div className='z-0 sm:mt-28 sm:ml-20 mt-20 ml-8 space-y-2'>
+    <div className=' z-0 sm:mt-28 sm:ml-20 mt-20 ml-8 space-y-2'>
       <p className=' sm:text-4xl text-2xl font-poppins font-bold text-gray-700'>Resume Templates</p>
       <span className=' sm:text-base text-sm font-poppins font-normal text-gray-500'>/ 0 - 5 years of experience</span>
       <div className='w-14 h-61 bg-[#0AC5A8] rounded-xl'></div>
@@ -44,13 +44,13 @@ const ResumeTemplates = () => {
 
 
 
-    <div className="  flex justify-center h-screen mt-12">
-      <div className="z-10 sm:w-11/12 sm:h-72 flex justify-end bg-stone-200 bg-gradient-to-b from-white via-white to-[#0AC5A8] shadow-xl rounded-2xl" style={{ boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)' }}></div>
-      
-    </div>
-    <Switch />
+    <div className=" block sm:flex sm:justify-center h-screen mt-12">
+      <div className="z-10 sm:w-11/12 sm:h-72 w-11/12 h-72 flex justify-end bg-stone-200 bg-gradient-to-b from-white via-white to-[#0AC5A8] shadow-xl rounded-2xl" style={{ boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)' }}>
+      </div>
 
-      <img src={resumeTempImg} alt='' className='relative z-20 sm:mr-10 w-5/12 h-96 -top-47rem left-43rem' />
+      </div>
+      
+    <Switch/>
 
     <div className=" z-0 flex items-center justify-center h-screen">
       <div className="absolute top-23.5rem sm:w-full sm:h-80">
@@ -68,6 +68,8 @@ const ResumeTemplates = () => {
         </svg>
       </div>
     </div>
+
+    <div></div>
 
     </>
   )

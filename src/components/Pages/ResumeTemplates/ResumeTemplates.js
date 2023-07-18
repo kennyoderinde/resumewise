@@ -44,15 +44,20 @@ const ResumeTemplates = () => {
 
 
 
-    <div className=" block sm:flex sm:justify-center h-screen mt-12">
-      <div className="z-10 sm:w-11/12 sm:h-72 w-11/12 h-72 flex justify-end bg-stone-200 bg-gradient-to-b from-white via-white to-[#0AC5A8] shadow-xl rounded-2xl" style={{ boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)' }}>
+    <div className=" flex justify-center  h-screen mt-12">
+      <div className=" z-10 sm:w-12/12 sm:h-72 w-11/12 h-72 flex justify-end bg-stone-200 bg-gradient-to-b from-white via-white to-[#0AC5A8] shadow-xl rounded-2xl" style={{ boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)' }}>
       </div>
 
-      </div>
+    </div>
       
-    <Switch/>
+    <div className=" absolute flex justify-center">
+      <div className="w-11/12">
+        <Switch />
+      </div>
+    </div>
 
-    <div className=" z-0 flex items-center justify-center h-screen">
+
+    {/* <div className=" z-0 flex items-center justify-center h-screen">
       <div className="absolute top-23.5rem sm:w-full sm:h-80">
         <svg
           className="wave-pattern"
@@ -60,17 +65,38 @@ const ResumeTemplates = () => {
           xmlns="http://www.w3.org/2000/svg"
           style={{ transform: 'rotate(180deg)' }}
         >
-          <path
-            fill="#0AC5A8"
-            fillOpacity="1"
-            d="M0,420C0,420,0,320,125,320C250,320,250,420,375,420C500,420,500,320,625,320C750,320,750,420,875,420C1000,420,1000,320,1125,320C1250,320,1250,420,1375,420C1500,420,1500,320,1625,320C1750,320,1750,420,1875,420C2000,420,2000,320,2125,320C2250,320,2250,420,2375,420C2500,420,2500,320,2625,320L2625,420L0,420Z"
-          ></path>
+          <path fill="#00C8AA" fill-opacity="1" d="M0,160L60,170.7C120,181,240,203,360,202.7C480,203,600,181,720,149.3C840,117,960,75,1080,74.7C1200,75,1320,117,1380,138.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+          </path>
         </svg>
       </div>
+    </div> */}
+
+    <div className=' hidden sm:flex sm:flex-col sm:-mt-45rem'>
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 1340 320"           
+        style={{ transform: 'rotate(180deg)' }}
+        >
+        <path 
+          fill="#00C8AA" 
+          fill-opacity="1" 
+          d="M0,64L80,69.3C160,75,320,85,480,112C640,139,800,181,960,165.3C1120,149,1280,75,1360,37.3L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+        </path>
+      </svg>
+  
     </div>
-
-    <div></div>
-
+    <div className='hidden sm:flex sm:flex-col'>
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 1152 256"
+        >
+        <path 
+          fill="#00C8AA" 
+          fill-opacity="1" 
+          d="M0,128L60,138.7C120,149,240,171,360,160C480,149,600,107,720,101.3C840,96,960,128,1080,133.3C1200,139,1320,117,1380,106.7L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+        </path>
+      </svg>
+      </div>
     </>
   )
 }

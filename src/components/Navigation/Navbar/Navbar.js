@@ -119,7 +119,7 @@ function Navbar() {
 
 
   return (
-    <div className=' fixed top-0 w-full'>
+    <div className=' z-30 fixed top-0 w-full'>
       <div className='header-parent bg-[#F5F5F5] sm:flex sm:space-x-24 sm:h-20 h-14 sm:p-1 p-2 shadow-md '>
           <a href='#' className='logo-anchor'>
             <img className='sm:w-44 sm:h-12 w-36 h-12  sm:m-4 ' src={resumeWiseLogo} alt='logo' />  

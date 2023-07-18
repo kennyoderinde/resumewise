@@ -42,8 +42,8 @@ module.exports = {
         '45rem': '45rem', // lady image 
         '47rem': '47rem',
         '33rem': '33rem',
+        '37rem': '37rem',
         '30rem': '30rem',
-        '23.5rem': '23.5rem',
         '7rem': '7rem' ,  
         '5rem': '5rem' , 
         '10.6rem': '10.6rem' , 

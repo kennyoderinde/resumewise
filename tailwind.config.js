@@ -22,8 +22,6 @@ module.exports = {
       width: {
         '61': '600px',
         '100' : '120vw',
-        '60': '58%',
-        '66': '60%',
         '30' : '30rem',
         '18' : '20rem',
       },
@@ -33,22 +31,30 @@ module.exports = {
         '100' : '120vw',
         '60': '58%',
         '66': '60%',
-        '30' : '30rem',
-        '18' : '20rem',
+        '27' : '27rem',
+        '22' : '22rem',
       },
 
 
        spacing: {
         '45rem': '45rem', // lady image 
-        '47rem': '47rem',
-        '33rem': '33rem',
+        '41rem': '41rem',
+        '35rem': '35rem',
         '37rem': '37rem',
         '30rem': '30rem',
         '7rem': '7rem' ,  
         '5rem': '5rem' , 
         '10.6rem': '10.6rem' , 
-        '23rem': '23rem' 
+        '19rem': '19rem' 
       },
+
+      fontSize: {
+        'xxl': '0.5px',     // Extra Small
+        'sm': '0.875rem',    // Small
+        
+        // Add more custom sizes as needed
+      },
+
 
     },
   },

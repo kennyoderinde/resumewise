@@ -21,7 +21,7 @@ const ResumeTemplates = () => {
     </div>
 
 
-    <div className=' hidden sm:flex sm:flex-col sm:-mt-35rem'>
+    <div className=' hidden sm:flex sm:flex-col sm:-mt-39rem'>
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 1340 320"           

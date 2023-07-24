@@ -9,7 +9,7 @@ const handleOptionClick = () => {
 const Samples = () => {
   return (
     <>
-    <div className=' sm:flex sm:flex-row sm:flex-wrap flex flex-col w-full sm:justify-center place-items-center sm:-mt-72 -mt-37rem'>
+    <div className=' sm:flex sm:flex-row sm:flex-wrap flex flex-col w-full sm:justify-center place-items-center sm:-mt-56 -mt-37rem'>
       {
         resumeSamplesData_.map(item => (
           <div 

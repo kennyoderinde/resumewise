@@ -7,8 +7,8 @@ const ResumeTemplates = () => {
   return (
     <>
     <div className=' z-0 sm:mt-28 sm:ml-20 mt-20 ml-8 space-y-2'>
-      <p className=' sm:text-4xl text-2xl font-poppins font-bold text-gray-700'>Resume Templates</p>
-      <span className=' sm:text-base text-sm font-poppins font-normal text-gray-500'>/ 0 - 5 years of experience</span>
+      <p className=' sm:text-4xl text-2xl font-poppins font-bold text-gray-300'>Resume Templates</p>
+      <span className=' sm:text-base text-sm font-poppins font-normal text-gray-200'>/ 0 - 5 years of experience</span>
       <div className='w-10 h-61 bg-[#0AC5A8] rounded-xl'></div>
     </div>
 
@@ -21,7 +21,7 @@ const ResumeTemplates = () => {
     </div>
 
 
-    <div className=' hidden sm:flex sm:flex-col sm:-mt-39rem'>
+    <div className=' relative sm:relative sm:flex sm:flex-col sm:-mt-45rem -mt-48'>
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 1340 320"           
@@ -35,7 +35,7 @@ const ResumeTemplates = () => {
       </svg>
   
     </div>
-    <div className='hidden sm:flex sm:flex-col'>
+    <div className=' sm:flex sm:flex-col'>
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 1152 256"

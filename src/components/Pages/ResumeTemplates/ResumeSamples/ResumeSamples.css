@@ -1,0 +1,15 @@
+/* styles.css (or your main CSS file) */
+/* 1. Hovering on the edges will create a depth effect */
+.hover\:scale-y-3d:hover .bg-cover {
+    transform: translateY(10px) scale(1.05);
+  }
+  
+  /* 2. Hovering on the center will create a lifting effect */
+  .hover\:scale-3d-center:hover .bg-cover {
+    transform: scale(1.05);
+  }
+  
+  /* 3. Hovering on the whole image will create a full 3D effect */
+  .hover\:scale-3d-full:hover .bg-cover {
+    transform: rotateX(-10deg) rotateY(10deg) scale(1.05);
+  }

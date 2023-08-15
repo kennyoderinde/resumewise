@@ -24,7 +24,7 @@ const resumeSamplesData_ = [
     name: "Creative",
     icon1: <BsMagnifier.BsZoomIn/>,
     icon2: < BsStar.BsFillStarFill/>,
-    rating: "Premium",
+    rating: null,
     img: (
       <img src = {creative} alt="creative1"/>
     ),
@@ -37,7 +37,7 @@ const resumeSamplesData_ = [
     name: "Basic",
     icon1: <BsMagnifier.BsZoomIn/>,
     icon2: < BsStar.BsFillStarFill/>,
-    rating: "Premium",
+    rating: null,
     img: (
       <img src = {basic} alt="basic1"/>
     ),
@@ -124,7 +124,7 @@ const resumeSamplesData_ = [
     name: "Executive",
     icon1: <BsMagnifier.BsZoomIn/>,
     icon2: <BsStar.BsFillStarFill/>,
-    rating: "Premium",
+    rating: null,
     img: (
       <img src = {executive} alt="executive"/>
     ),
@@ -136,7 +136,7 @@ const resumeSamplesData_ = [
     name: "IT",
     icon1: <BsMagnifier.BsZoomIn/>,
     icon2: <BsStar.BsFillStarFill/>,
-    rating: "Premium",
+    rating: null,
     img: (
       <img src = {it} alt="it"/>
     ),
@@ -148,7 +148,7 @@ const resumeSamplesData_ = [
     name: "Simple",
     icon1: <BsMagnifier.BsZoomIn/>,
     icon2: <BsStar.BsFillStarFill/>,
-    rating: "Premium",
+    rating: null,
     img: (
       <img src = {simple} alt="simple"/>
     ),

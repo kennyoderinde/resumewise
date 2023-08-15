@@ -3,6 +3,9 @@ import Resumes from './Resumes'
 import Cvs from './Cvs';
 import CoverLetters from './CoverLetters';
 
+import { motion, AnimatePresence } from "framer-motion";
+
+
 import Modal from './Modal'
 
 
@@ -14,15 +17,7 @@ const SwitchPage = () => {
   const [selectedOptionDetails, setSelectedOptionDetails] = useState(null);
 
 
-  // desktop view
-  const handleOptionClick = (option) => {
-    const selectedOptionDetails = settingsOptions.find((item) => item.name === option);
-    setSelectedOption(option);
-    setSelectedOptionDetails(selectedOptionDetails);
-    setIsModalOpen(true)
-  };
 
-  
   const settingsOptions = [
     { 
         id: 1, 
@@ -52,16 +47,25 @@ const SwitchPage = () => {
 
   ];
 
-  
+  // desktop view
+  const handleOptionClick = (option) => {
+    const selectedOptionDetails = settingsOptions.find((item) => item.name === option);
+    setSelectedOption(option);
+    setSelectedOptionDetails(selectedOptionDetails);
+    setIsModalOpen(true)
+  };
+
+  // mobile option click
+  const handleMobileOptionClick = (option) => {
+    handleOptionClick(option);
+    setIsModalOpen(true);
+  };
 
   
   const renderSettingsOptions = () => {
     return settingsOptions.map((option) => (
       <li key={option.id}>
 
-      {/* {selectedOption === option.name && (
-        <span className="sm:flex min-w-full sm:w-1 h-1 bg-[#0AC5A8] "></span>  the line tat the top
-      )} */}
         <button
           id='option-style'
           onClick={() => handleOptionClick(option.name)}
@@ -74,6 +78,21 @@ const SwitchPage = () => {
         >
 
           <span className=" w-40 h-10 bg-[#0AC5A8] sm:border-none  text-start sm:bg-transparent text-base font-poppins font-bold whitespace-nowrap">{option.name}</span>
+            {isModalOpen && (
+          <Modal onClose={() => setIsModalOpen(false)} className="sm:hidden">
+            {/* Render the modal content here */}
+            {selectedOptionDetails && (
+              <>
+                <h2>Details for {selectedOptionDetails.name}</h2>
+                {/* Add more details here as needed */}
+              </>
+            )}
+          </Modal>
+        )}
+
+
+
+
           <span className=" hidden sm:block text-sm font-normal font-poppins">{option.status}</span>
 
           <a href="#_" className={` w-12 relative hidden sm:inline-flex items-center justify-center px-3 py-2 overflow-hidden font-mono font-medium tracking-tighter text-white rounded-lg hover:bg-[#0AC5A8] group ${
@@ -116,18 +135,36 @@ const SwitchPage = () => {
             <div className="">
               <ul className=" relative sm:flex sm:flex-row flex flex-col sm:top-0 sm:left-0 -top-0 left-0   ">{renderSettingsOptions()}</ul>
           </div>
+          <main>
+              <AnimatePresence mode ='wait'>
+                <motion.div
+                  key={selectedOption}
+                  initial={{ y: 10, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: -10, opacity: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  {renderSelectedOption()}
+                </motion.div>
+              </AnimatePresence>
+            </main>
+
+
+
           <div className="sm:w-full w-full sm:h-24 h-28 sm:flex sm:flex-row flex flex-col justify-start items-center sm:justify-start sm:items-center ">
             <div className=" mt-10 sm:h-full text-gray-700 sm:text-base font-normal text-center sm:flex sm:flex-row flex flex-col justify-center  items-center font-quicksand ">
-              {renderSelectedOption()}
+              {/* {renderSelectedOption()} */}
             </div>
           </div>
         </div>
       </div>
     </div>
+    
     </>
   );
 
 };
+
 
 
 

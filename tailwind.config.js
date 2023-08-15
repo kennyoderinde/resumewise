@@ -38,6 +38,7 @@ module.exports = {
 
        spacing: {
         '45rem': '45rem', // lady image 
+        '58rem': '58rem', 
         '41rem': '41rem',
         '35rem': '35rem',
         '37rem': '37rem',

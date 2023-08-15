@@ -1,12 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const Modal = () => {
+const Modal = ({ onClose, children }) => {
   return (
-    <div>
-      <span>CVs</span>
-      <span>Cover Letter</span>
+    <div className="modal-overlay sm:hidden">
+      <div className="modal-content">
+        {children}
+        <button className="modal-close-button" onClick={onClose}>
+          Close
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;

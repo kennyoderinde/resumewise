@@ -26,20 +26,78 @@
 //   ); 
 // } 
 
-import React from 'react'
-import './style.css'
-const CoverLetters = () => {
-  return (
-    <div class="container">
-      <div class="box">
-        <div class="spin-container">
-          <div class="shape">
-            <div class="bd"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  )
-}
 
-export default CoverLetters
+// import React, {useState} from 'react'
+
+// const CoverLetters = () => {
+//   const [list, setList] = useState("Resume", "CV", "Cover Letter")
+  
+//   return (
+//     <div>
+//       {
+//         list.map((el, index ) => {
+//           <div>
+
+//           </div>
+//         })
+//       }
+
+//     </div>
+//   )
+// }
+
+// export default CoverLetters
+
+import React, { useState } from 'react';
+
+const ItemSwitcher = () => {
+  const items = [
+    { title: 'resume', content: 'This is the content for the resume.' },
+    { title: 'letter', content: 'This is the content for the letter.' },
+    { title: 'CV', content: 'This is the content for the CV.' },
+  ];     
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isFolded, setIsFolded] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsFolded(!isFolded);
+  };
+
+  const handleItemClick = (index) => {
+    setCurrentIndex(index);
+    setIsFolded(false);
+  };
+
+  return (
+    <div className=" mt-32">
+      <button
+        className=" w-32 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        onClick={handleButtonClick}
+      >
+        {items[currentIndex].title}   
+      </button>
+      {isFolded && (
+        <ul className=" w-32 h-auto p-4 mt-2 bg-gray-300 border rounded shadow-md">
+          {items.map((item, index) => (
+            <li
+              key={index}
+              onClick={() => handleItemClick(index)}
+              className="cursor-pointer p-2 hover:bg-gray-100"
+            >
+              {item.title}
+            </li>
+          ))}
+        </ul>
+
+      )}
+
+          <div className="mt-4">
+          {items[currentIndex].content}
+          </div>
+      </div>
+    
+  );
+};
+
+export default ItemSwitcher;
+

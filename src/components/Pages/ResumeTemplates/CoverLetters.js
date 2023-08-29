@@ -10,7 +10,7 @@ const CoverLetters = () => {
       <p className='sm:font-poppins sm:text-xl text-base font-bold text-start pr-10 whitespace-nowrap'>16+ Convincing Cover Letter Templates </p> 
       <span className=' sm:font-poppins sm:text-xl text-base font-bold text-start pr-10 text-gray-900'>[Pick & Download]</span>
       <p className=' text-start text-sm sm:font-normal font-medium leading-normal mt-2 text-gray-900'>Looking to create a cover letter that stands out? Try one of our 12 
-      cover letter templates (and land that job)!
+        cover letter templates (and land that job)!
       </p>
     </div>
     

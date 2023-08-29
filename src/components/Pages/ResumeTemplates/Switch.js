@@ -120,7 +120,6 @@ const SwitchPage = () => {
         return <CoverLetters />;
       default:
         return < Resumes/>;
-
     }
   };
 
@@ -133,7 +132,8 @@ const SwitchPage = () => {
       <div className="">
         <div className=" sm:mt-0 -mt-4 ">
             <div className="">
-              <ul className=" relative sm:flex sm:flex-row flex flex-col sm:top-0 sm:left-0 -top-0 left-0   ">{renderSettingsOptions()}</ul>
+              
+              <ul className=" hidden relative sm:flex sm:flex-row flex-col sm:top-0 sm:left-0 -top-0 left-0   ">{renderSettingsOptions()}</ul>
           </div>
           <main>
               <AnimatePresence mode ='wait'>
@@ -144,18 +144,18 @@ const SwitchPage = () => {
                   exit={{ y: -10, opacity: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  {renderSelectedOption()}
+                  <div className="hidden md:flex">{renderSelectedOption()}</div>
                 </motion.div>
               </AnimatePresence>
             </main>
 
 
 
-          <div className="sm:w-full w-full sm:h-24 h-28 sm:flex sm:flex-row flex flex-col justify-start items-center sm:justify-start sm:items-center ">
+          {/* <div className=" sm:w-full w-full sm:h-24 h-28 sm:flex sm:flex-row flex flex-col justify-start items-center sm:justify-start sm:items-center ">
             <div className=" mt-10 sm:h-full text-gray-700 sm:text-base font-normal text-center sm:flex sm:flex-row flex flex-col justify-center  items-center font-quicksand ">
-              {/* {renderSelectedOption()} */}
+              {renderSelectedOption()}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

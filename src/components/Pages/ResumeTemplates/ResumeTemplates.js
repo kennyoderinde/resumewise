@@ -4,14 +4,15 @@ import Switch from './Switch'
 import ResumeSamples from "./ResumeSamples/ResumeSamples"
 import Background from './Background'
 import SwitchMobile from './SwitchMobile'
+import CustomersRating from './CustomersRating'
 
 const ResumeTemplates = () => {
   return (
     <>
     <div className=' z-0 sm:mt-28 sm:ml-20 mt-20 ml-8 space-y-2'>
-      <p className=' sm:text-4xl text-2xl font-poppins font-bold text-gray-700'>Resume Templates</p>
-      <span className=' sm:text-base text-sm font-poppins font-normal text-gray-500'>/ 0 - 5 years of experience</span>
-      <div className='w-10 h-61 bg-[#0AC5A8] rounded-xl'></div>
+      <p className=' sm:text-4xl text-2xl font-poppins font-bold text-slate-800'>Resume Templates</p>
+      <span className=' sm:text-base text-sm font-poppins font-normal text-slate-500'>/ 0 - 5 years of experience</span>
+      <div className='w-10 h-61 bg-[#0AC5A8] rounded-xl font'></div>
     </div>
 
     
@@ -30,6 +31,8 @@ const ResumeTemplates = () => {
 
     <div>
      <ResumeSamples />
+
+     <CustomersRating />
 
 
     </div>

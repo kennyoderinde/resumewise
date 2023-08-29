@@ -66,7 +66,7 @@ const ItemSwitcher = () => {
     <div className="relative md:hidden w-full h-full flex flex-col justify-center p-8 -top-20">
       <div
         onClick={handleButtonClick}
-        className="z-20 w-80 mx-auto h-auto flex justify-start fixed space-x-24 bg-[#0AC5A8] text-white text-lg font-bold py-4 px-10 rounded-full focus:outline-none focus:shadow-outline"
+        className="z-20 w-80 mx-auto h-auto flex justify-start fixed space-x-24 bg-[#0AC5A8] text-white text-base font-bold py-4 px-10 rounded-full focus:outline-none focus:shadow-outline"
       >
         <button className="w-full whitespace-nowrap font-poppins text-start ">{items[currentIndex].title}</button> 
         <BiSolidDownArrow className="text-2xl  w-20" />
@@ -89,7 +89,7 @@ const ItemSwitcher = () => {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3 }}
                   onClick={() => handleItemClick(index)}
-                  className="cursor-pointer w-[17.5rem] px-5 text-base font-bold text-gray-700 flex mx-auto mt-5 font-poppins"
+                  className="cursor-pointer w-[17.5rem] px-5 text-sm font-bold text-gray-700 flex mx-auto mt-5 font-poppins"
                 >
                   {item.title}
                 </motion.li>
@@ -105,8 +105,8 @@ const ItemSwitcher = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <p className="text-base font-bold">{items[currentIndex].subject}</p>
-        <p className="text-base mt-3">{items[currentIndex].content}</p>
+        <p className="text-sm font-bold">{items[currentIndex].subject}</p>
+        <p className="text-sm mt-3">{items[currentIndex].content}</p>
       </motion.div>
     </div>
   );

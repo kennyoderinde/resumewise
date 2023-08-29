@@ -5,7 +5,7 @@ import CoverLettImage from '../../assets/cl-group.png'
 const CoverLetters = () => {
   return (
     <>
-    <div className=' flex sm:flex-row sm:space-x-[39rem] sm:mt-0 -mt-0 sm:ml-0 -ml-40 z-10 sm:h-52 h-20 '>
+    <div className=' flex sm:flex-row sm:space-x-[51rem] sm:mt-0 sm:ml-0 -ml-40 z-10 sm:h-52 h-20 '>
     <div className='sm:mt-20 sm:ml-0 sm:w-10/12 w-72 flex flex-col sm:justify-normal sm:p-0 justify-start sm:text-start text-gray-900 sm:font-poppins'>
       <p className='sm:font-poppins sm:text-xl text-base font-bold text-start pr-10 whitespace-nowrap'>16+ Convincing Cover Letter Templates </p> 
       <span className=' sm:font-poppins sm:text-xl text-base font-bold text-start pr-10 text-gray-900'>[Pick & Download]</span>
@@ -14,7 +14,7 @@ const CoverLetters = () => {
       </p>
     </div>
     
-      <img src={CoverLettImage} alt='' className='hidden sm:flex absolute w-10/12 h-96 -mt-40'/>
+      <img src={CoverLettImage} alt='' className='hidden sm:flex absolute w-10/12 h-96 -mt-48'/>
     </div>
     </>
   )

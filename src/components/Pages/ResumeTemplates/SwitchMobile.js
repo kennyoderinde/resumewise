@@ -40,7 +40,7 @@ const ItemSwitcher = () => {
     content: 'Pick one of our free resume template, fill it out, and land that dream job! Create and download your professional resume in lass than 5 minutes.', 
     },
     { 
-      title: ' CoverLetters', 
+      title: ' Cover Letters', 
       subject: '16+ Convincing Cover Letter Templates [Pick & Download] ',
 
       content: '         Looking to create a cover letter that stands out? Try one of our 12 cover letter templates (and land that job)!', 
@@ -66,28 +66,25 @@ const ItemSwitcher = () => {
 
   return (
     <div className="relative  md:hidden w-full h-full flex flex-col justify-center p-8 -top-2">
-      <div className='z-20 w-auto h-auto flex justify-center bg-[#0eae96] text-white font-bold py-4 px-10 rounded-full focus:outline-none focus:shadow-outline'>
-      <button
-        className="  "
-        onClick={handleButtonClick}  
-      >
-        {items[currentIndex].title}   
-      </button>
+      <div
+      onClick={handleButtonClick}  
+      className='z-20 w-auto h-auto flex justify-start space-x-24 bg-[#0AC5A8] text-white text-lg font-bold py-4 px-10 rounded-full focus:outline-none focus:shadow-outline'>
 
-      <span>{BiSolidDownArrow}</span>
+      <button className=" w-9/12  ">{items[currentIndex].title}   </button>
+      < BiSolidDownArrow  className='text-2xl w-2/12'/>
         
       </div>
       
       {isFolded && (
-        <ul className=" z-0 absolute w-auto h-auto px-4 py-7 top-16 bg-white border rounded-b-3xl shadow-md flex flex-col text-start justify-start space-y-3 ">
+        <ul className=" z-0 absolute w-auto h-auto px-4 py-7 top-16 bg-white border rounded-b-3xl shadow-md flex flex-col justify-center space-y-3 ">
           {items.map((item, index) => (
             <li
               key={index}
               onClick={() => handleItemClick(index)}
-              className="cursor-pointer w-full px-24 text-base font-bold text-gray-700 text-start mt-5 "
+              className="cursor-pointer w-[17.5rem] px-5 text-base font-bold text-gray-700 flex mx-auto  mt-5 "
             >
               {item.title}
-            </li>
+            </li> 
           ))}
         </ul>
 

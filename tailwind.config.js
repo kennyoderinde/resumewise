@@ -24,6 +24,7 @@ module.exports = {
         '100' : '120vw',
         '30' : '30rem',
         '18' : '20rem',
+        '17.5': '17.5rem'
       },
 
       height: {
@@ -37,7 +38,7 @@ module.exports = {
 
 
        spacing: {
-        '45rem': '45rem', // lady image 
+        '51rem': '51rem', // lady image 
         '58rem': '58rem', 
         '41rem': '41rem',
         '35rem': '35rem',

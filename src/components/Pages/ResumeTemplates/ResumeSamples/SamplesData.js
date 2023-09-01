@@ -136,7 +136,7 @@ const resumeSamplesData_ = [
     name: "IT",
     icon1: <BsMagnifier.BsZoomIn/>,
     icon2: <BsStar.BsFillStarFill/>,
-    rating: null,
+    rating: "Premium",
     img: (
       <img src = {it} alt="it"/>
     ),

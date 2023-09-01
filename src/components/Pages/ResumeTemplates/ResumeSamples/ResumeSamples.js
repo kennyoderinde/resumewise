@@ -34,16 +34,18 @@ const Samples = () => {
             {/* ratings */}
            {
             item.rating !==null && 
-              <div className='z-20 w-28 h-8 bg-gray-100 flex justify-center items-center rounded-xl space-x-2 font-quicksand ml-auto' style={{ boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)' }}>
+            <div className=''>
+              <div className='z-30 absolute w-28 h-8 bg-white flex justify-center items-center rounded-xl space-x-2 font-quicksand ml-56 -mt-6' style={{ boxShadow: '0 0 20px rgba(0, 0, 0, 0.2)' }}>
                 <span className=' w-4 h-4 rounded-full bg-cyan-400 text-white flex items-center justify-center' style={{ fontSize: "10px"}}>{item.icon2}</span>
                 <span className=' font-semibold'>{item.rating}</span>
               </div>
+             </div>
            }
 
-
+           <div className=' p-5 w-full'>
             <div
-              className=' hover sm:w-auto sm:h-auto p-4 w-80 h-[27rem] flex transform transition-transform hover:scale-105'
-              style={{ boxShadow: '0 0 50px rgba(0, 0, 0, 0.04)' }}
+              className=' hover sm:w-auto sm:h-auto p-10 w-80 h-[27rem] flex transform transition-transform hover:scale-105'
+              style={{ boxShadow: '0 0 50px rgba(0, 0, 0, 0.44)' }}
               
             > 
               <div
@@ -55,7 +57,8 @@ const Samples = () => {
                 }}
               />{item.img}
             </div> 
-          </div>          
+          </div>  
+          </div>        
         ))
       }
 

@@ -7,11 +7,18 @@ const CustomersRating = () => {
   const [hover, setHover] = useState(null);
   const [userComment, setUserComment] = useState('');
   const [userName, setUserName] = useState('');
-  const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
+  const [currentCommentIndex, setCurrentCommentIndex] = useState(3);
 
   const handleRatingClick = (ratingValue) => {
+    const currentDate = new Date().toLocaleString();
     setRating(ratingValue);
-    setIsSubmitDisabled(false);
+    setResponses([
+      ...responses,
+      { name: userName, rating: ratingValue, comment: userComment, date: currentDate },
+    ]);
+    setUserComment('');
+    setUserName('');
+    setCurrentCommentIndex(responses.length);
   };
 
   const handleCommentChange = (event) => {
@@ -22,16 +29,16 @@ const CustomersRating = () => {
     setUserName(event.target.value);
   };
 
-  const handleSubmission = () => {
-    const currentDate = new Date().toLocaleString();
-    setResponses([
-      ...responses,
-      { name: userName, rating: rating, comment: userComment, date: currentDate },
-    ]);
-    setUserComment('');
-    setUserName('');
-    setRating(null);
-    setIsSubmitDisabled(true);
+  const handleNextComment = () => {
+    if (currentCommentIndex < responses.length - 1) {
+      setCurrentCommentIndex(currentCommentIndex + 1);
+    }
+  };
+
+  const handlePrevComment = () => {
+    if (currentCommentIndex > 0) {
+      setCurrentCommentIndex(currentCommentIndex - 1);
+    }
   };
 
   return (
@@ -75,19 +82,21 @@ const CustomersRating = () => {
           value={userComment}
           onChange={handleCommentChange}
         />
-        <button onClick={handleSubmission} disabled={isSubmitDisabled}>
-          Submit
-        </button>
+        <button onClick={() => handleRatingClick(rating)}>Submit</button>
       </div>
       <div>
         <h2>Responses:</h2>
-        <ul>
-          {responses.map((response, index) => (
-            <li key={index}>
-              User: {response.name}, Rating: {response.rating}, Comment: {response.comment}, Date: {response.date}
-            </li>
-          ))}
-        </ul>
+        {responses.length > 0 && (
+          <div>
+            <button onClick={handlePrevComment}>Previous</button>
+            <button onClick={handleNextComment}>Next</button>
+            <ul>
+              <li>
+                User: {responses[currentCommentIndex].name}, Rating: {responses[currentCommentIndex].rating}, Comment: {responses[currentCommentIndex].comment}, Date: {responses[currentCommentIndex].date}
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

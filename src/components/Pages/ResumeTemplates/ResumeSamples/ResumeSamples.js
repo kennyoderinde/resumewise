@@ -12,7 +12,7 @@ const Samples = () => {
     <>
 
     {/* RESUME SAMPLES DISPLAY   */}
-    <div className=' sm:grid sm:grid-cols-4  flex flex-col md:w-11/12 w-full md:mx-auto md:justify-center place-items-center sm:-mt-[19rem] '>
+    <div className=' sm:grid sm:grid-cols-4  flex flex-col md:w-11/12 w-full md:mx-auto md:justify-center place-items-center sm:-mt-[19rem] -mt-[10.6rem]'>
       {
         resumeSamplesData_.map(item => (
           <div 

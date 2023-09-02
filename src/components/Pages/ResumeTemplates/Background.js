@@ -4,7 +4,7 @@ const Background = () => {
   return (
     <div>
         {/* Background Display */}
-    <div className='  relative flex flex-col sm:-mt-58rem -mt-[30rem]'>
+    <div className='  relative flex flex-col sm:-mt-58rem -mt-[35rem]'>
       <svg 
         xmlns="http://www.w3.org/2000/svg" 
         viewBox="0 0 1340 320"           

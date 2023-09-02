@@ -5,6 +5,8 @@ import ResumeSamples from "./ResumeSamples/ResumeSamples"
 import Background from './Background'
 import SwitchMobile from './SwitchMobile'
 import CustomersRating from './CustomersRating'
+import WhyResumeWise from './WhyResumeWise'
+import ExpertReviews from './ExpertReviews'
 
 const ResumeTemplates = () => {
   return (
@@ -34,6 +36,9 @@ const ResumeTemplates = () => {
 
      <CustomersRating />
 
+     <WhyResumeWise  />
+
+    <ExpertReviews />
 
     </div>
     </>

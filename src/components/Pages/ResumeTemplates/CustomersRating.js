@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { RiStarSFill } from 'react-icons/ri';
+import { TbPlayerTrackPrev, TbPlayerTrackNext } from "react-icons/tb";
+
 
 const CustomersRating = () => {
   const [responses, setResponses] = useState([]);
@@ -67,13 +69,13 @@ const CustomersRating = () => {
     <>
     <div className=' md:p-12 p-2'>
       <div className=' flex flex-col mb-20 w-full h-full mx-auto justify-center bg-stone-100 p-1 rounded-lg' style={{ boxShadow: '0 0 50px rgba(0, 0, 0, 0.14)' }}>
-        <p className='text-center md:text-3xl text-xl font-semibold font-poppins text-slate-700 mb-3 px-14'>See what our customers think</p>
-        <div className=' w-16 h-1 bg-[#0AC5A8] flex mx-auto mb-5'></div>
+        <p className='text-center md:text-4xl text-2xl font-bold font-poppins text-slate-700 mb-3 px-4'>See what our customers think</p>
+        <div className=' w-16 h-[5px] bg-[#0AC5A8] flex mx-auto mb-5 rounded-md'></div>
     
-        <div className=' border border-gray-300 w-11/12 h flex md:flex-row flex-col mx-auto'>
+        <div className=' border border-gray-300 w-11/12 h flex md:flex-row flex-col mx-auto py-5 md:px-10 '>
           <div className=' flex md:flex-row flex-col mb-20 w-auto h-auto  '>
             <div className='flex md:flex-col space-x-3'>
-              <p className=' font-poppins font-medium text-slate-800'>Rate us:</p>
+              <p className=' font-poppins font-medium text-lg text-slate-800'>Rate us:</p>
 
               <div className='flex'>
               {[...Array(5)].map((_, i) => {
@@ -90,7 +92,7 @@ const CustomersRating = () => {
                     <RiStarSFill
                       //{/* size={40} */}
                       className={
-                        `md:w-12 w-8  md:h-12 h-8 bg-gray-300  ${
+                        `md:w-12 w-8  md:h-12 h-8 bg-gray-300 rounded-xl  ${
                           ratingValue <= (hover || rating)
                             ? 'text-[#0AC5A8]'
                             : 'text-white'
@@ -116,8 +118,8 @@ const CustomersRating = () => {
               placeholder='Full name...'
               value={userFullName}
               onChange={handleNameChange}
-              className=' px-4 text-sm  md:h-6 w-44 h-8 outline-none'
-              style={{ boxShadow: '0 0 50px rgba(0, 0, 0, 0.04)' }}
+              className=' px-4 text-sm  md:h-6 w-44 h-8 outline-none rounded-md'
+              style={{ boxShadow: '0 0 50px rgba(0, 0, 0, 0.14)' }}
 
             />
             <input
@@ -125,14 +127,14 @@ const CustomersRating = () => {
               placeholder='Add a comment...'
               value={userComment}
               onChange={handleCommentChange}
-              className=' px-4 text-sm  md:h-6 w-44 h-8 outline-none'
-              style={{ boxShadow: '0 0 50px rgba(0, 0, 0, 0.04)' }}
+              className=' px-4 text-sm  md:h-6 w-44 h-8 outline-none rounded-md'
+              style={{ boxShadow: '0 0 50px rgba(0, 0, 0, 0.14)' }}
 
             />
             <button 
               onClick={handleSubmission} 
               disabled={isSubmitDisabled}
-              className=' text-center text-sm w-20 h-auto bg-[#0AC5A8] hover:bg-slate-600 hover:text-white font-poppins '
+              className=' text-center text-sm w-20 h-auto bg-[#0AC5A8] hover:bg-slate-600 hover:text-white font-poppins rounded-md '
               style={{ boxShadow: '0 0 50px rgba(0, 0, 0, 0.14)' }}
 
               >
@@ -144,18 +146,18 @@ const CustomersRating = () => {
         <div className=' md:w-6/12 h-full w-full flex mx-auto md:mt-0 -mt-12  '>
 
           {/* <prev /> next btn */}
-          <button onClick={handlePrevPage} disabled={currentPage === 0}>
-            Prev
+          <button onClick={handlePrevPage} disabled={currentPage === 0} className='p-2'>
+            <TbPlayerTrackPrev />
           </button>
           
-          <ul className=' w-auto h-auto mx-auto flex  md:space-x-20 space-x-10 '>
+          <ul className=' w-auto h-auto mx-auto flex  md:space-x-20 space-x-5 '>
             {displayedResponses.map((response, index) => (
               <li 
               key={index}
               className=' flex flex-col md:text-center text-start mx-auto items-center'
               >
                 <div className=' flex flex-col justify-start w-auto h-auto md:mt-0 mt-6'>
-                  <p className='w-16 h-5 text-xs bg-yellow-400 text-start font-semibold '> <span className='font-normal'>Rating: </span>{response.rating} </p>
+                  <p className='w-16 h-5 text-xs bg-yellow-400 text-start font-semibold rounded-md '> <span className='font-normal'>Rating: </span>{response.rating} </p>
                   <p className=' text-xs font-medium text-justify'>{response.comment}</p>
                   <p className=' text-xs text-stone-800 text-start'>{response.name}</p>  
                   <p className='text-xs text-stone-500 text-start'>{response.date}</p>
@@ -167,8 +169,9 @@ const CustomersRating = () => {
           <button
             onClick={handleNextPage}
             disabled={currentPage === totalPages - 1}
+            className='p-2'
           >
-            Next
+            <TbPlayerTrackNext />
           </button>
         </div>
         </div>

@@ -44,7 +44,7 @@ const Samples = () => {
 
            <div className=' p-5 w-full'>
             <div
-              className=' hover sm:w-auto sm:h-auto p-10 w-80 h-[27rem] flex transform transition-transform hover:scale-105'
+              className=' hover sm:w-auto sm:h-auto md:p-10 p-2 w-80 h-[27rem] flex transform transition-transform hover:scale-105'
               style={{ boxShadow: '0 0 50px rgba(0, 0, 0, 0.44)' }}
               
             > 

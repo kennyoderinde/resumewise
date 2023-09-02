@@ -66,7 +66,7 @@ const ItemSwitcher = () => {
     <div className="relative md:hidden w-full h-full flex flex-col justify-center p-8 -top-20">
       <div
         onClick={handleButtonClick}
-        className="z-20 w-80 mx-auto h-auto flex justify-start relative top-44 space-x-24 bg-[#0AC5A8] text-white text-base font-bold py-4 px-10 rounded-full focus:outline-none focus:shadow-outline"
+        className="z-20 w-80 mx-auto h-auto flex justify-start relative top-44 space-x-24 bg-[#0AC5A8] text-white text-base font-bold py-3 px-10 rounded-full focus:outline-none focus:shadow-outline"
       >
         <button className="w-full whitespace-nowrap font-poppins text-start ">{items[currentIndex].title}</button> 
         <BiSolidDownArrow className="text-2xl  w-20" />

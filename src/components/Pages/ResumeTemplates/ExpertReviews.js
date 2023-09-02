@@ -19,7 +19,7 @@ const ExpertReviews = () => {
   const ExpertData = [
     {
       id: '1',
-      img: img1,
+      img: img6,
       details: {
         name: 'Kehinde Oderinde',
         role: 'Software Developer, Coach & Trainer',
@@ -97,7 +97,7 @@ const ExpertReviews = () => {
 
       {
         id: '6',
-        img: img6,
+        img: img1,
         details: {
           name: 'Oana Vintila',
           role: 'Career Counsellor',

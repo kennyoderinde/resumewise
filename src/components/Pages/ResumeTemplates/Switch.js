@@ -93,7 +93,7 @@ const SwitchPage = () => {
 
 
 
-          <span className=" hidden sm:block text-sm font-normal font-poppins">{option.status}</span>
+          <span className=" hidden md:block text-sm font-normal font-poppins">{option.status}</span>
 
           <a href="#_" className={` w-12 relative hidden sm:inline-flex items-center justify-center px-3 py-2 overflow-hidden font-mono font-medium tracking-tighter text-white rounded-lg hover:bg-[#0AC5A8] group ${
             selectedOption === option.name ? "bg-[#0AC5A8] border-2 border-[#0AC5A8] " : "bg-gray-200 border-2 border-gray-400"
@@ -128,12 +128,12 @@ const SwitchPage = () => {
   return (
     <>
 
-    <div className=' sm:z-20 absolute sm:absolute bg-none sm:p-4 w-full sm:w-5/12 mt-10 ml-4 z-20 '> 
+    <div className=' lg:flex hidden lg:z-20 bg-none sm:p-4 w-full lg:w-5/12 mt-10 ml-4 z-20 '> 
       <div className="">
         <div className=" sm:mt-0 -mt-4 ">
             <div className="">
               
-              <ul className=" hidden relative sm:flex sm:flex-row flex-col sm:top-0 sm:left-0 -top-0 left-0   ">{renderSettingsOptions()}</ul>
+              <ul className=" hidden relative lg:flex lg:flex-row flex-col md:-top-3  ">{renderSettingsOptions()}</ul>
           </div>
           <main>
               <AnimatePresence mode ='wait'>
@@ -144,18 +144,10 @@ const SwitchPage = () => {
                   exit={{ y: -10, opacity: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className="hidden md:flex">{renderSelectedOption()}</div>
+                  <div className="hidden lg:flex lg:-mt-10">{renderSelectedOption()}</div>
                 </motion.div>
               </AnimatePresence>
             </main>
-
-
-
-          {/* <div className=" sm:w-full w-full sm:h-24 h-28 sm:flex sm:flex-row flex flex-col justify-start items-center sm:justify-start sm:items-center ">
-            <div className=" mt-10 sm:h-full text-gray-700 sm:text-base font-normal text-center sm:flex sm:flex-row flex flex-col justify-center  items-center font-quicksand ">
-              {renderSelectedOption()}
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

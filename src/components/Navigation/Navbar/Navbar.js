@@ -120,16 +120,17 @@ function Navbar() {
 
   return (
     <div className=' z-30 fixed top-0 w-full'>
-      <div className='header-parent bg-[#F5F5F5] sm:flex sm:space-x-24 sm:h-20 h-14 sm:p-1 p-2 shadow-md '>
-          <a href='#' className='logo-anchor'>
-            <img className='sm:w-44 sm:h-12 w-36 h-12  sm:m-4 ' src={resumeWiseLogo} alt='logo' />  
-          </a>
-        <header className=' hidden header sm:flex sm:justify-center sm:space-x-20 '>
+      <div className='header-parent bg-[#F5F5F5] flex lg:space-x-72 sm:h-20 h-14 sm:p-1 p-2 shadow-lg '>
+
+        <div className='sm:w-44 sm:h-12 w-36 h-12 lg:ml-14 '>
+          <img className=' w-auto h-auto sm:m-4 ' src={resumeWiseLogo} alt='logo' />  
+        </div>
+        <header className=' hidden header lg:flex lg:justify-center lg:space-x-16   '>
           
           <NavigationDesktop navLinks={navLinks} className= '' />
 
           <Link to="/my-document">   
-            <button type='button' className=' hidden group w-32 sm:w-36 px-1 py-1 sm:px-2 sm:py-2 sm:ml-40 sm:mt-4 rounded-3xl border bg-[#0AC5A8] 
+            <button type='button' className=' hidden group w-32 sm:w-36 px-1 py-1 sm:px-2 sm:py-2 lg:ml-60 sm:mt-4 rounded-3xl border bg-[#0AC5A8] 
             sm:flex items-center text-center text-white text-xs sm:text-base font-quicksand font-semibold whitespace-nowrap '> 
               My Documents 
             </button>
@@ -141,62 +142,62 @@ function Navbar() {
         </header>
 
         {/* opening amd closing of mobile navbar */}
-        <div onClick={() => setNav(!nav) } className=" absolute cursor-pointer pr-8 z-30 sm:hidden flex left-[23rem] top-4">
-          {nav ? <FaTimes  size={30} className=" text-[#090c13]"/> : <HiMenu size={30} className="text-[#0AC5A8]"/>}
+        <div onClick={() => setNav(!nav) } className=" absolute cursor-pointer pr-8 z-30 lg:hidden flex left-[23rem] md:left-[41rem] top-4">
+          {nav ? <FaTimes className=" text-[#090c13] md:w-12 md:h-12 w-9 h-9"/> : <HiMenu  className="text-[#0AC5A8] md:w-12 md:h-12 w-9 h-9"/>}
         </div>
 
 
         {nav && (
 
-        <div className=" sm:hidden absolute flex  w-full h-screen top-0 left-0 bg-gray-600 opacity-90">
-          <div className=" sm:hidden flex flex-col justify-start items-center  absolute top-0 left-44 w-60 h-screen bg-white shadow-lg text-[#090c13] font-quicksand ">
+        <div className=" lg:hidden absolute flex  w-full h-screen top-0 left-0 bg-gray-600 opacity-90">
+          <div className=" lg:hidden flex flex-col justify-start items-center  absolute top-0 left-44 w-60 md:w-full h-screen bg-white shadow-lg text-[#090c13] font-quicksand ">
 
 
             {/* My Documents*/}
             <div className="mt-20 flex flex-col space-y-4">
 
               <Link to="/my-document">              
-                <button type='button' className=' group w-52 sm:w-36 px-1 py-1  sm:px-2  sm:py-2 sm:ml-36 sm:mt-2 rounded-3xl border bg-[#0AC5A8] 
+                <button type='button' className=' group w-52  px-1 py-1  sm:px-2  sm:py-2 sm:ml-36 sm:mt-2 rounded-3xl border bg-[#0AC5A8] 
                         flex items-center justify-center text-center text-white text-lg sm:text-base font-quicksand font-semibold whitespace-nowrap '> 
                   My Documents 
                 </button>
               </Link>
 
               <Link to="/account-setting">
-                <button type='button' className=' group w-52 sm:w-36 px-1 py-1  sm:py-2 sm:ml-36 sm:mt-2 rounded-3xl border bg-stone-200 
+                <button type='button' className=' group w-52 px-1 py-1  sm:py-2 sm:ml-36 sm:mt-2 rounded-3xl border bg-stone-200 
                         flex items-center text-center justify-center text-[#0AC5A8] text-lg sm:text-base font-quicksand font-semibold whitespace-nowrap '> 
                   Account Page
                 </button>
               </Link>
 
               {/* underline */}
-              <div className=" w-52 h-0 flex justify-center mt-4 border-b border-stone-400"></div>
+              <div className=" md:w-56 md:h-0 w-52 h-0 flex justify-center mt-4 border-b border-stone-400 md:ml-32 "></div>
 
               <NavigationDesktop navLinks={navLinks} />
                 {/* underline */}
-              <div className=" w-52 h-0 flex justify-center mt-20 border-b border-stone-400"></div>
+              <div className=" md:w-56 md:h-0 w-52 h-0 flex justify-center mt-20 border-b border-stone-400 md:ml-32 "></div>
 
 
               <Link to="/about-us">
-                <button type='button' className=' text-[#090c13] text-lg sm:text-base font-quicksand font-semibold whitespace-nowrap '> 
+                <button type='button' className=' text-[#090c13] text-lg sm:text-base md:text-xl font-quicksand font-semibold whitespace-nowrap md:ml-32 '> 
                   About Us
                 </button>
               </Link>
               <Link to="/e-book-store">
-                <button type='button' className=' text-[#090c13] text-lg sm:text-base font-quicksand font-semibold whitespace-nowrap '> 
+                <button type='button' className=' text-[#090c13] text-lg md:text-xl sm:text-base font-quicksand font-semibold whitespace-nowrap md:ml-32 '> 
                   eBook Store
                 </button>
               </Link>
             </div>
 
-            <div className=" w-52 h-0 flex justify-center mt-4 border-b border-stone-400"></div>
+            <div className=" w-52 h-0 flex justify-center mt-4 border-b border-stone-400 md:-ml-[15rem]"></div>
 
 
             <Link to="/sign-out">
-                <button type='button' className=' text-[#090c13] text-lg sm:text-base -ml-[7rem] pl-2 i font-quicksand font-semibold whitespace-nowrap '> 
-                  Sign Out
-                </button>
-              </Link>
+              <button type='button' className=' text-[#090c13] text-lg sm:text-base md:text-xl -ml-[7rem] md:-ml-[15rem] pl-2 i font-quicksand font-semibold whitespace-nowrap '> 
+                Sign Out
+              </button>
+            </Link>
             
 
             {/* <div className="px-4 cursor-pointer py-5 -top-64 ">

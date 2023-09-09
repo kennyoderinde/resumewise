@@ -51,6 +51,7 @@ module.exports = {
         '7rem': '7rem' ,  
         '5rem': '5rem' , 
         '10.6rem': '10.6rem' , 
+        '15rem' : '15rem',
         '19rem': '19rem',
         '23rem': '23rem' 
 

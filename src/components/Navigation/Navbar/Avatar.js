@@ -22,8 +22,8 @@ const Avatar = ({ accountPage, signOut }) => {
       onMouseEnter={handleMouseEnter}
     >
       <div className='flex space-x-2 group'>
-        <img src={defaultAvatar} alt='' className=" sm:flex w-10 h-10 sm:mt-4 mt-20 ml-6" />
-        < BiSolidDownArrow size={30} className=' text-[#090c13] hover:text-[#0AC5A8]' />
+        <img src={defaultAvatar} alt='' className=" flex w-10 h-10 sm:mt-4 mt-20 ml-6" />
+        < BiSolidDownArrow size={24} className=' text-[#090c13] absolute hover:text-[#0AC5A8] ml-10' />
       </div>
       {showModal && (
         <div

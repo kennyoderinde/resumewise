@@ -33,8 +33,8 @@ const NavigationDesktop = ({ navLinks }) => {
   };
 
   return (
-    <nav>
-      <ul className='main-nav sm:flex grid sm:-space-y-0 space-y-3 list-none sm:w-61 sm:justify-stretch sm:p-0 sm:pl-4 '>
+    <nav className="w-full">
+      <ul className=' main-nav lg:flex grid sm:-space-y-0 space-y-3 list-none sm:w-61 md:w- lg:justify-stretch lg:space-x-6 sm:p-0 sm:pl-4 lg:-ml-10 md:ml-32 '>
         {navLinks.map((el, i) => {
           if (!el.children) {
             const isActive = activeItem === el.path;
@@ -42,12 +42,12 @@ const NavigationDesktop = ({ navLinks }) => {
               <li key={i}>
                 <Link
                   to={el.path}
-                  className={`header-nav-link sm:flex no-underline sm:h-16 sm:w-36 self-center sm:justify-center sm:items-center hover:text-[#0AC5A8] ${
+                  className={`header-nav-link sm:flex no-underline sm:h-16 sm:w-36 self-center lg:justify-center text-start  sm:items-center hover:text-[#0AC5A8]  ${
                     isActive ? 'text-[#0AC5A8]' : 'text-[#090c13]'
                   }`}
                   onClick={() => handleClick(el.path)}
                 >
-                  <span className={`whitespace-nowrap block font-quicksand font-semibold sm:text-base text-lg hover:text-[#0AC5A8] ${
+                  <span className={`whitespace-nowrap block font-quicksand font-semibold sm:text-base md:text-xl lg:text-lg hover:text-[#0AC5A8] ${
                     isActive ? 'text-[#0AC5A8]' : 'text-[#090c13]'
                   }`}>
                     {el.name}
@@ -68,7 +68,7 @@ const NavigationDesktop = ({ navLinks }) => {
             >
               <div className='header-nav-div text-[#090c13] sm:h-full bg-none sm:flex flex sm:justify-center  sm:w-28 w-44 cursor-pointer font-quicksand font-semibold group sm:space-x-2 whitespace-nowrap'>
                 <span className=" self-center cursor-pointer font-quicksand w-8 h-6 sm:mt-3 mt-2  text-[#090c13] text-center group-hover:text-[#0AC5A8]">{el.icon1}</span>
-                <span className=" self-center cursor-pointer font-quicksand sm:h-16 sm:mt-10 text-[#090c13] whitespace-nowrap text-center group-hover:text-[#0AC5A8]">{el.name}</span>
+                <span className=" self-center cursor-pointer font-quicksand sm:h-16 sm:mt-10 text-[#090c13] whitespace-nowrap lg:text-lg md:text-xl  text-center group-hover:text-[#0AC5A8]">{el.name}</span>
                 <span className=" self-center cursor-pointer font-quicksand w-8 h-6 sm:mt-2 mt-1 ml-4  text-[#090c13] text-center group-hover:text-[#0AC5A8]">{el.icon}</span>
               </div>
               <motion.ul
@@ -82,15 +82,15 @@ const NavigationDesktop = ({ navLinks }) => {
                       return (
                         <li 
                         key={index} 
-                        className=' sub-menu-li w-full h-8 sm:w-52 sm:h-7 bg-gray-200 sm:bg-[#F5F5F5] shadow-md rounded-md hover:text-[#0AC5A8]'>
+                        className=' sub-menu-li w-full h-8 lg:w-52 lg:h-7 md:w-72 md:h-11 md:text-xl lg:text-base bg-gray-200 sm:bg-[#F5F5F5] shadow-md rounded-md hover:text-[#0AC5A8]'>
                           <a
                             href='#'
-                            className='sub-menu-link sm:flex items-center pl-4 sm:w-full sm:h-full text-[#090c13] font-quicksand font-semibold '
+                            className='sub-menu-link sm:flex items-center pl-4 sm:w-full sm:h-full text-[#090c13] font-quicksand font-semibold  '
                             style={{ textDecoration: "none" }}
                             onClick={() => {window.location.pathname = ele.path}}
 
                           >
-                            <span className="hover:text-[#0AC5A8]">{ele.name}</span>
+                            <span className="hover:text-[#0AC5A8] ">{ele.name}</span>
                           </a>
                         </li>
                       );

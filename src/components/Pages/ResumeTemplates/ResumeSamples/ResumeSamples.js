@@ -12,7 +12,7 @@ const Samples = () => {
     <>
 
     {/* RESUME SAMPLES DISPLAY   */}
-    <div className=' sm:grid sm:grid-cols-4  flex flex-col md:w-11/12 w-full md:mx-auto md:justify-center place-items-center sm:-mt-[19rem] -mt-[7rem]'>
+    <div className=' md:grid lg:grid-cols-4 md:grid-cols-2  flex flex-col md:w-11/12 w-full md:mx-auto md:justify-center place-items-center lg:-mt-[19rem] -mt-[7rem]'>
       {
         resumeSamplesData_.map(item => (
           <div 
@@ -42,9 +42,9 @@ const Samples = () => {
              </div>
            }
 
-           <div className=' p-5 w-full'>
+           <div className=' p-5 md:p-3 w-full '>
             <div
-              className=' hover sm:w-auto sm:h-auto md:p-10 p-2 w-80 h-[27rem] flex transform transition-transform hover:scale-105'
+              className=' hover sm:w-auto sm:h-auto lg:p-7 md:p-2 p-2 w-80 h-[27rem] flex transform transition-transform hover:scale-105'
               style={{ boxShadow: '0 0 50px rgba(0, 0, 0, 0.44)' }}
               
             > 

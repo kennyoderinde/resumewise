@@ -72,7 +72,7 @@ const CustomersRating = () => {
         <p className='text-center md:text-4xl text-2xl font-bold font-poppins text-slate-700 mb-3 px-4'>See what our customers think</p>
         <div className=' w-16 h-[5px] bg-[#0AC5A8] flex mx-auto mb-5 rounded-md'></div>
     
-        <div className=' border border-gray-300 w-11/12 h flex md:flex-row flex-col mx-auto py-5 md:px-10 '>
+        <div className=' border border-gray-300 w-11/12 h flex lg:flex-row flex-col mx-auto py-5 md:px-10  '>
           <div className=' flex md:flex-row flex-col mb-20 w-auto h-auto  '>
             <div className='flex md:flex-col space-x-3'>
               <p className=' font-poppins font-medium text-lg text-slate-800'>Rate us:</p>
@@ -143,7 +143,7 @@ const CustomersRating = () => {
           </div>
         </div>    
 
-        <div className=' md:w-6/12 h-full w-full flex mx-auto md:mt-0 -mt-12  '>
+        <div className=' md:w-6/12 h-full w-full flex mx-auto  -mt-12  '>
 
           {/* <prev /> next btn */}
           <button onClick={handlePrevPage} disabled={currentPage === 0} className='p-2'>

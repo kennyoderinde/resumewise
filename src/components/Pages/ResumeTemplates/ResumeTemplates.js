@@ -32,9 +32,9 @@ const ResumeTemplates = () => {
     </div>
 
     <div>
-     {/* <ResumeSamples /> */}
+     <ResumeSamples />
 
-     {/* <CustomersRating /> */}
+     <CustomersRating />
 
      {/* <WhyResumeWise  /> */}
 

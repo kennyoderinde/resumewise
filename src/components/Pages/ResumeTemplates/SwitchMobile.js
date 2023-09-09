@@ -88,7 +88,7 @@ const ItemSwitcher = () => {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.5 }}
           >
-            <ul className="z-0 absolute w-auto h-auto px-4 py-7 top-72 md:top-80 bg-white border rounded-b-3xl shadow-2xl flex flex-col justify-center space-y-3">
+            <ul className="z-0 absolute w-auto h-auto px-4 py-7 top-64 md:top-80 bg-white border rounded-b-3xl shadow-2xl flex flex-col justify-center space-y-3">
               {items.map((item, index) => (
                 <motion.li
                   key={index}

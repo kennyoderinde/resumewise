@@ -178,7 +178,7 @@ const ExpertReviews = () => {
                             </button> 
                           </div>
                         </div>
-                        <div className="mt-4 md:mt-16 text-center flex flex-col">
+                        <div className="mt-4 md:mt-16 text-center flex flex-col leading-snug">
     
                         {item.text.map((paragraph, index) => (
                             <p key={index} className="lg:text-base text-sm text-gray-600 mb-2 w-full h-full">

@@ -156,7 +156,7 @@ const ExpertReviews = () => {
         {/* <ul className="flex w-full h-full md:p-32 gap-16 md:-mt-24"> */}
 
         <div className="flex justify-center items-center font-poppins">
-            <ul className="lg:flex lg:flex-row grid grid-cols-1 justify-center items-center gap-8 md:gap-16 space-y-1 lg:p-20 p-5 mx-auto w-full h-full" >
+            <ul className="lg:flex lg:flex-row grid grid-cols-1 justify-center items-center gap-8 md:gap-16 md:space-y-12 space-y-1 lg:p-20 p-5 mx-auto w-full h-full" >
                 {ExpertData.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage).map((item) => (
                 <li key={item.id}>
                     <div className=" w-full h-full bg-white lg:p-14 p-6 rounded-lg shadow-2xl md:-mt-20  ">
@@ -178,7 +178,7 @@ const ExpertReviews = () => {
                             </button> 
                           </div>
                         </div>
-                        <div className="mt-4 text-center flex flex-col">
+                        <div className="mt-4 md:mt-16 text-center flex flex-col">
     
                         {item.text.map((paragraph, index) => (
                             <p key={index} className="lg:text-base text-sm text-gray-600 mb-2 w-full h-full">

@@ -139,34 +139,36 @@ const ExpertReviews = () => {
         </p>
         <div className="w-16 h-[5px] bg-white flex mx-auto mb-5 rounded-md"></div>
 
-        <div className='flex mx-auto md:justify-between md:space-y-0 space-x-40 justify-center  w-full '>
-            <button onClick={handlePrevPage} disabled={currentPage === 0} className=" w-10 h-10 bg-white rounded-full p-2">
-            <TbPlayerTrackPrev className=' w-6 h-6 flex mx-auto' />
+        <div className='flex mx-auto  md:space-y-0 md:space-x-80 space-x-20 justify-center md:-mt-0 -mt-  w-full lg:mb-10 md:mb-20 '>
+            <button onClick={handlePrevPage} disabled={currentPage === 0} className=" w-10 h-10 bg-white rounded-full p-2 md:-mt-0 -mt-3 shadow-lg">
+            <TbPlayerTrackPrev className=' w-6 h-6 flex mx-auto text-gray-400' />
             </button>
 
             <button
             onClick={handleNextPage}
             disabled={currentPage === totalPages - 1}
-            className=" w-10 h-10 bg-white rounded-full p-2"
+            className=" w-10 h-10 bg-white rounded-full p-2 md:-mt-0 -mt-3 shadow-lg"
             >
-            <TbPlayerTrackNext className=' w-6 h-6 flex mx-auto' />
+            <TbPlayerTrackNext className=' w-6 h-6 flex mx-auto text-gray-400' />
             </button>
         </div>
 
         {/* <ul className="flex w-full h-full md:p-32 gap-16 md:-mt-24"> */}
 
         <div className="flex justify-center items-center font-poppins">
-            <ul className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16 md:p-20 p-5 mx-auto w-full h-full" >
+            <ul className="lg:flex lg:flex-row grid grid-cols-1 justify-center items-center gap-8 md:gap-16 space-y-1 lg:p-20 p-5 mx-auto w-full h-full" >
                 {ExpertData.slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage).map((item) => (
                 <li key={item.id}>
-                    <div className=" w-full h-full bg-white md:p-16 p-6 rounded-lg shadow-lg md:-mt-20 ">
-                        <div className='flex md:flex-row flex-col md:space-x-12 space-y-4'>
-                            <div className="w-full h-auto mx-auto">
-                                <img src={item.img} alt="" className="w-32 h-32 rounded-lg mx-auto" />
+                    <div className=" w-full h-full bg-white lg:p-14 p-6 rounded-lg shadow-2xl md:-mt-20  ">
+                        <div className=' w-full lg:h-40 md:h-28  flex md:flex-row flex-col md:space-x-12 space-y-4 '>
+                            <div className="md:w-48 md:h-48 w-40 h-40  mx-auto">
+                                <img src={item.img} alt="" className=" w-auto h-auto rounded-lg mx-auto" />
                             </div>
+
+                          <div className='flex space-x-4'>
                             <div className=' w-full md:text-start text-center'>
-                                <p className="md:text-3xl text-2xl font-semibold whitespace-nowrap">{item.details.name}</p>
-                                <p className="text-base text-gray-500 ">{item.details.role}</p>
+                                <p className="lg:text-3xl text-xl font-semibold whitespace-nowrap">{item.details.name}</p>
+                                <p className="text-base sm:text-sm text-gray-700 ">{item.details.role}</p>
                             </div>
 
                             <button className=' w-10 h-10 bg-gray-700 rounded-full mx-auto flex border p-4 justify-center items-center'>
@@ -174,12 +176,12 @@ const ExpertReviews = () => {
                                     <FaLinkedinIn className=' text-white ' />
                                 </a>
                             </button> 
-
+                          </div>
                         </div>
                         <div className="mt-4 text-center flex flex-col">
     
                         {item.text.map((paragraph, index) => (
-                            <p key={index} className="md:text-base text-sm text-gray-600 mb-2 w-full h-full">
+                            <p key={index} className="lg:text-base text-sm text-gray-600 mb-2 w-full h-full">
                             {paragraph}
                             </p>
                         ))}

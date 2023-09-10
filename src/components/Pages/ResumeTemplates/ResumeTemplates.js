@@ -36,9 +36,9 @@ const ResumeTemplates = () => {
 
      <CustomersRating />
 
-     {/* <WhyResumeWise  /> */}
+     <WhyResumeWise  />
 
-    {/* <ExpertReviews /> */}
+    <ExpertReviews />
 
     </div>
     </>
